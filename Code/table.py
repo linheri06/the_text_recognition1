@@ -6,7 +6,7 @@ from paddleocr import PPStructure,draw_structure_result,save_structure_res
 table_engine = PPStructure(show_log=True, image_orientation=True)
 
 save_folder = './output'
-img_path = 'D:\\Downloads\\ppocr_img\\table\\layout.jpg'
+img_path = 'D:\\Downloads\\table.jpg'
 #from paddleocr import table_engine
 result = table_engine(img_path)
 img = cv2.imread(img_path)
@@ -20,7 +20,7 @@ for line in result:
 
 from PIL import Image
 
-font_path = 'D:\\Downloads\\ppocr_img\\fonts\\simfang.ttf' # PaddleOCR下提供字体包
+font_path = 'D:\\Downloads\\fonts\\simfang.ttf'
 image = Image.open(img_path).convert('RGB')
 im_show = draw_structure_result(image, result,font_path=font_path)
 im_show = Image.fromarray(im_show)
