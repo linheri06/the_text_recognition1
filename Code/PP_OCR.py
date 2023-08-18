@@ -4,7 +4,7 @@ from paddleocr import PaddleOCR,draw_ocr
 # to switch the language model in order.
 ocr = PaddleOCR(use_angle_cls=True, lang='en') # need to run only once to download and load model into memory
 img_path = 'D:\\Downloads\\scene\\SceneTrialTest\\ryoungt_05.08.2002\\aPICT0034.JPG'
-result = ocr.ocr(img_path, cls=True)
+result = ocr.ocr(img_path, cls=True) 
 for idx in range(len(result)):
     res = result[idx]
     for line in res:
